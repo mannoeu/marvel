@@ -5,32 +5,7 @@ import List from "../../components/List";
 
 import styles from "./styles";
 
-const data = [
-  {
-    id: 1,
-    title: "test",
-  },
-  {
-    id: 2,
-    title: "test",
-  },
-  {
-    id: 3,
-    title: "test",
-  },
-  {
-    id: 4,
-    title: "test",
-  },
-  {
-    id: 5,
-    title: "test",
-  },
-  {
-    id: 6,
-    title: "test",
-  },
-];
+import data from "../../../assets/application.json";
 
 const Home = () => {
   return (
@@ -38,11 +13,11 @@ const Home = () => {
       <Text style={styles.mutedText}>Bem-vindo ao Marvel Heroes</Text>
       <Text style={styles.title}>Escolha o seu personagem</Text>
       <ScrollView decelerationRate={0.99} showsVerticalScrollIndicator={false}>
-        <List title="Herois" data={data} />
-        <List title="Vilões" data={data} />
-        <List title="Anti-heróis" data={data} />
-        <List title="Alienígenas" data={data} />
-        <List title="Humanos" data={data} />
+        <List title="Heróis" data={data.heroes} />
+        <List title="Vilões" data={data.villains} />
+        <List title="Anti-heróis" data={data.antiHeroes} />
+        <List title="Alienígenas" data={data.aliens} />
+        <List title="Humanos" data={data.humans} />
       </ScrollView>
     </SafeAreaView>
   );
